@@ -6,6 +6,7 @@
 ## **`Integrante/s`**
 
 Franco Aleksic
+Lucas Daniel Enrique Schniper
 
 
 ---
