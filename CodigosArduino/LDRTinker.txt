@@ -1,0 +1,20 @@
+
+
+// C++ code
+//
+
+int luz = 0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  luz = analogRead(A1);
+  Serial.println(luz);
+  delay(500);
+}
+
+
+
+https://www.tinkercad.com/things/iec1Kvo4BJu/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=bBvHMocZdFiVfy3CBhT9zifIedr66MyBejqlrw6xyyk
