@@ -1,0 +1,21 @@
+// C++ code
+//
+int buzzer = 9;
+
+void setup() {
+  pinMode(buzzer, OUTPUT);
+  digitalWrite(buzzer, LOW);
+}
+
+void loop() {
+  digitalWrite(buzzer, HIGH);
+  delay(500);
+  digitalWrite(buzzer, LOW);
+  delay(500);
+}
+
+   
+
+
+
+https://www.tinkercad.com/things/e8SRpx8W9gI-copy-of-copy-of-epic-maimu/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=ChLFVye4uoEqGmzjw_322dSz0LU_Txn14SJKvTD3NMk
