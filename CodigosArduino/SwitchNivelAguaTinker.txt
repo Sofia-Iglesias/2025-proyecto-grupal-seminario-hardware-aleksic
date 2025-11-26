@@ -1,0 +1,28 @@
+// C++ code
+//
+int nivel = 2;
+int estado = 0;
+
+void setup() {
+  pinMode(nivel, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  estado = digitalRead(nivel);
+
+  if (estado == LOW) {
+    Serial.println("VACIO");
+  } else {
+    Serial.println("OK");
+  }
+
+  delay(300);
+}
+
+
+
+
+
+
+https://www.tinkercad.com/things/i77Ukw1g3VI/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=9EteF0FH0pWiRrWT6XpXw2gndIC4sWKtra-lAtKQbEU
