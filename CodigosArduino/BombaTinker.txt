@@ -1,0 +1,17 @@
+// C++ code
+//
+
+
+void setup() {
+  pinMode(7, OUTPUT);
+  digitalWrite(7, LOW);
+}
+
+void loop() {
+  digitalWrite(7, HIGH);
+  delay(5000);
+  digitalWrite(7, LOW);
+  delay(5000);
+} 
+   
+https://www.tinkercad.com/things/8UQBUcfyi7V/editel?sharecode=6E2zMVA6LS_-BR9lNw8VrYT_Rc16wFad4NKjC1XSkSg
