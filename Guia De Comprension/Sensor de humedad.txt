@@ -1,0 +1,44 @@
+Guía de Preguntas
+Nombre del proyecto: Sistema de Riego Automático Inteligente
+ Integrante: Franco Aleksic y Lucas Schniper
+
+Nombre del componente: (Sensor de humedad del suelo (capacitivo))
+¿Qué tipo de dispositivo es (sensor o actuador)? Explicá brevemente su función principal.
+ Es un sensor. Su función es medir la humedad del suelo, permitiendo saber si la tierra está seca o húmeda.
+¿Qué tipo de señal utiliza para comunicarse con Arduino?
+ Entrega una señal analógica, que varía en función del nivel de humedad detectado.
+¿Cuál es el rango de valores que puede entregar o recibir el componente?
+ Entrega valores entre 0 y 1023.
+ Valores bajos (cercanos a 0): suelo húmedo.
+ Valores altos (cercanos a 1023): suelo seco.
+¿Qué pines de conexión tiene el componente? Ennumerar y describir su función.
+ VCC: alimentación (3.3 V o 5 V).
+ GND: tierra.
+ AOUT: salida analógica que entrega el valor de humedad.
+¿Qué pin o pines de Arduino utilizan para conectarlo? ¿Por qué elegiste esos pines?
+ Se conecta al pin analógico A0, ya que entrega una señal analógica proporcional a la humedad.
+Dibujá y explicá brevemente el esquema de conexión del componente con Arduino (incluyendo resistencias si son necesarias).
+ VCC → 5 V de Arduino
+ GND → GND
+ AOUT → A0 (entrada analógica)
+
+link de la imagen (no sabia como ponertela): https://imgur.com/a/tEkZw9a
+
+ No requiere resistencias adicionales.
+¿Cuál es el principio de funcionamiento del componente?
+ Mide la capacitancia del suelo: cuando hay más agua, la constante dieléctrica cambia y se modifica la señal de salida.
+¿Utiliza alguna librería particular para programarlo?
+ No. Se usa la función analogRead().
+¿Cómo se interpreta el dato de entrada o salida del componente en el programa?
+ analogRead(A0) devuelve un número entre 0 y 1023. El código compara ese valor con un umbral (por ejemplo 500) para decidir si activar el riego.
+¿Qué limitaciones o precauciones eléctricas hay que tener en cuenta?
+ Evitar sumergir completamente el sensor y no dejarlo permanentemente conectado a 5 V en tierra muy húmeda, para prevenir corrosión.
+¿Cómo verificarías que el componente funciona correctamente antes de incorporarlo al proyecto final?
+ Conectarlo solo al Arduino y leer el valor por el monitor serie, observando cambios al mojar o secar el sensor.
+Simular en Tinkercad e incluir el link de la simulación.
+ (Link pendiente de incluir)
+En caso de aplicar, ¿qué valor o lectura esperás obtener en la simulación si el componente funciona correctamente?
+ Suelo seco: valor cercano a 800–900.
+ Suelo húmedo: valor cercano a 300–400.
+¿Cómo podría fallar el componente o cómo detectarías un mal funcionamiento en el código o en el circuito?
+ Si el valor leído no cambia al mojar el sensor, puede estar desconectado, dañado o mal alimentado.

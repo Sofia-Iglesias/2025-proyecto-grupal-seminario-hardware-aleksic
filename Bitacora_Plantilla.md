@@ -5,8 +5,8 @@
 
 ## **`Integrante/s`**
 
-- `Nombre 1`  
-- `Nombre 2`
+Franco Aleksic
+Lucas Daniel Enrique Schniper
 
 
 ---
@@ -14,22 +14,22 @@
 
 ## **`Semana 1`**
 
-**`Fecha:`**
+**`Fecha: 20/8/2025`**
 
 **`Actividades Realizadas:`**
 
-- `Actividad 1`  
-- `Actividad 2`
+- `Actividad 1`: Idea de proyecto: “Sistema Automático de Riego con Arduino”.
+- `Actividad 2`: Búsqueda de información de sensores de humedad y actuadores de riego.
 
 **`Dificultades:`**
 
-- `Dificultad 1`  
-- `Dificultad 2`
+- `Dificultad 1`: No tener dispositivos físicos para hacer pruebas.
+- `Dificultad 2`: No saber si hacerlo con alguien o solo y dificultad con encontrar la idea.
 
 **`Próximos Pasos:`**
 
-- `Próximo paso 1`  
-- `Próximo paso 2`
+- `Próximo paso 1`: Hacer esquemas para verificar la conexion y funcionamiento.
+- `Próximo paso 2`: Invesitgar sobre tinkercad.
 
 
 ---
@@ -41,15 +41,15 @@
 
 **`Actividades Realizadas:`**
 
-- `Actividad 1`  
-- `Actividad 2`
+- `Actividad 1`: Determinar los sensores y actuadores y la fuente. 
+- `Actividad 2`: Investigar como usar Arduino y Tinkercad.
 
 **`Dificultades:`**
 
-- `Dificultad 1`  
-- `Dificultad 2`
+- `Dificultad 1`: No tener los dispositivos para hacer las pruebas.
+- `Dificultad 2`: Adaptar el proyecto a las consignas.
 
 **`Próximos Pasos:`**
 
-- `Próximo paso 1`  
-- `Próximo paso 2`
+- `Próximo paso 1`: Empeze el codigo pero hay que terminarlo y verificarlo.  
+- `Próximo paso 2`: Ver bien que elementos necesito

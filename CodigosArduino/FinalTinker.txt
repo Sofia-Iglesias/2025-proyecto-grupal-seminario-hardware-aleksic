@@ -1,0 +1,54 @@
+// C++ code
+//
+int sensorH = A0;
+int sensorL = A1;
+int sensorNivel = 2;
+int bomba = 7;
+int led = 8;
+int buzzer = 9;
+
+int humedad = 0;
+int luz = 0;
+int nivel = 0;
+
+int umbralH = 500;
+int umbralL = 700;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(bomba, OUTPUT);
+  pinMode(led, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(sensorNivel, INPUT_PULLUP);
+
+  digitalWrite(bomba, LOW);
+  digitalWrite(led, LOW);
+  digitalWrite(buzzer, LOW);
+}
+
+void loop() {
+  humedad = analogRead(sensorH);
+  luz = analogRead(sensorL);
+  nivel = digitalRead(sensorNivel);
+
+  if (nivel == LOW) {
+    digitalWrite(bomba, LOW);
+    digitalWrite(led, HIGH);
+    digitalWrite(buzzer, HIGH);
+  } else {
+    if (humedad > umbralH && luz < umbralL) {
+      digitalWrite(bomba, HIGH);
+      digitalWrite(led, HIGH);
+      digitalWrite(buzzer, LOW);
+    } else {
+      digitalWrite(bomba, LOW);
+      digitalWrite(led, LOW);
+      digitalWrite(buzzer, LOW);
+    }
+  }
+
+  delay(500);
+}
+
+https://www.tinkercad.com/things/4DhyMi8ebnL/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=dAgL9tT9b-38ZhHZxVOsQYK4Ccc99_e_TpW_R-Gum0c
