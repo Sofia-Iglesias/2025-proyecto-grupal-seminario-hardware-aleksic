@@ -1,0 +1,18 @@
+
+// C++ code
+//
+int led = 8;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  digitalWrite(led, LOW);
+}
+
+void loop() {
+  digitalWrite(led, HIGH);
+  delay(500);
+  digitalWrite(led, LOW);
+  delay(500);
+}
+
+https://www.tinkercad.com/things/dk4RNcg0mvh/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=u5bB_jtW7ZH_HdPWi91vJo10YfVKuWDv3nTbMxwlVbw
