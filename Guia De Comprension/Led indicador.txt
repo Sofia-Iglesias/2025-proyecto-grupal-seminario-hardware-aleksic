@@ -1,0 +1,35 @@
+Guía de Preguntas
+Nombre del componente: (LED indicador)
+¿Qué tipo de dispositivo es (sensor o actuador)? Explicá brevemente su función principal.
+ Es un actuador visual.
+¿Qué tipo de señal utiliza para comunicarse con Arduino?
+ Señal digital (ON/OFF).
+¿Cuál es el rango de valores que puede entregar o recibir el componente?
+ 0 V (apagado) o 5 V (encendido). La corriente debe limitarse a unos 20 mA con resistencia.
+¿Qué pines de conexión tiene el componente? Ennumerar y describir su función.
+ Ánodo (+).
+ Cátodo (–).
+¿Qué pin o pines de Arduino utilizan para conectarlo? ¿Por qué elegiste esos pines?
+ Pin 8, como salida digital.
+Dibujá y explicá brevemente el esquema de conexión del componente con Arduino (incluyendo resistencias si son necesarias).
+ Ánodo → pin 8.
+ Cátodo → resistencia de 220 Ω → GND.
+
+ link de la imagen (no sabia como ponertelo): https://imgur.com/a/LxMipdf
+
+¿Cuál es el principio de funcionamiento del componente?
+ El LED emite luz al circular corriente en sentido directo a través de su unión semiconductora.
+¿Utiliza alguna librería particular para programarlo?
+ No, solo digitalWrite().
+¿Cómo se interpreta el dato de entrada o salida del componente en el programa?
+ HIGH = LED encendido.
+ LOW = LED apagado.
+¿Qué limitaciones o precauciones eléctricas hay que tener en cuenta?
+ Siempre usar una resistencia limitadora para evitar que se queme el LED.
+¿Cómo verificarías que el componente funciona correctamente antes de incorporarlo al proyecto final?
+ Conectar el LED con una resistencia y enviar HIGH/LOW desde el código.
+Simular en Tinkercad e incluir el link de la simulación.
+ (Link pendiente de incluir)
+En caso de aplicar, ¿qué valor o lectura esperás obtener en la simulación si el componente funciona correctamente?
+¿Cómo podría fallar el componente o cómo detectarías un mal funcionamiento en el código o en el circuito?
+ Si se conecta sin resistencia, puede quemarse. Si no enciende, verificar polaridad o conexión.

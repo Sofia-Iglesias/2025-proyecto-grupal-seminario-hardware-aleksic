@@ -1,0 +1,38 @@
+Guía de Preguntas
+Nombre del componente: (Sensor de nivel de agua (flotador))
+¿Qué tipo de dispositivo es (sensor o actuador)? Explicá brevemente su función principal.
+ Es un sensor digital que detecta si hay agua o no en un depósito.
+¿Qué tipo de señal utiliza para comunicarse con Arduino?
+ Entrega una señal digital (HIGH o LOW).
+¿Cuál es el rango de valores que puede entregar o recibir el componente?
+ HIGH (1) = hay agua.
+ LOW (0) = depósito vacío.
+¿Qué pines de conexión tiene el componente? Ennumerar y describir su función.
+ COM: común (a GND o VCC según el tipo).
+ NO/NC: contacto normalmente abierto o cerrado.
+¿Qué pin o pines de Arduino utilizan para conectarlo? ¿Por qué elegiste esos pines?
+ Se conecta al pin digital 2, configurado como INPUT_PULLUP para leer el estado sin resistencias externas.
+Dibujá y explicá brevemente el esquema de conexión del componente con Arduino (incluyendo resistencias si son necesarias).
+ Un extremo del flotador al pin 2, el otro a GND.
+ Cuando el flotador baja (sin agua), el circuito se cierra y el pin lee LOW.
+
+
+link de la imagen (no sabia como ponertelo): https://imgur.com/a/HBef8WO
+
+¿Cuál es el principio de funcionamiento del componente?
+ Utiliza un interruptor magnético que cambia de estado al subir o bajar el flotador según el nivel del agua.
+¿Utiliza alguna librería particular para programarlo?
+ No. Se usa digitalRead().
+¿Cómo se interpreta el dato de entrada o salida del componente en el programa?
+ digitalRead(sensorNivel) devuelve true (HIGH) si hay agua y false (LOW) si está vacío.
+¿Qué limitaciones o precauciones eléctricas hay que tener en cuenta?
+ Verificar la polaridad y no usarlo con tensiones mayores a 5 V. Mantener limpio el mecanismo del flotador.
+¿Cómo verificarías que el componente funciona correctamente antes de incorporarlo al proyecto final?
+ Mover el flotador manualmente y observar en el monitor serie si cambia el valor de “Nivel de agua”.
+Simular en Tinkercad e incluir el link de la simulación.
+ (Link pendiente de incluir)
+En caso de aplicar, ¿qué valor o lectura esperás obtener en la simulación si el componente funciona correctamente?
+ Flotador arriba: “OK”.
+ Flotador abajo: “Vacío”.
+¿Cómo podría fallar el componente o cómo detectarías un mal funcionamiento en el código o en el circuito?
+ Si se traba el flotador o si hay falsos contactos, el código podría indicar “Vacío” aunque haya agua.
