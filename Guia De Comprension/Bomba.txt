@@ -1,0 +1,56 @@
+TP - Guía de Comprensión de Componentes - Proyecto Seminario
+
+Antes de recibir los componentes físicos, cada grupo deberá responder esta guía y realizar una simulación funcional del circuito propuesto.
+
+El objetivo de la guía es asegurarse de que comprendan el principio de funcionamiento, las conexiones y la lógica de programación de los elementos que van a utilizar.
+
+Las respuestas deben ser claras, completas y referidas al componente elegido.
+Cada grupo deberá crear en el repositorio del proyecto una carpeta llamada “Guía de Comprensión”, donde se deberán subir un archivo respondiendo la Guía por cada componente utilizado.
+El nombre de cada archivo debe seguir el formato: Nombre del proyecto - Apellido1 - Apellido2 - Nombre del componente.
+Por ejemplo: EstaciónMeteorológica - Iglesias - Mischener - SensorDeTemperatura.
+La entrega es obligatoria: sin la presentación de esta guía completa y la simulación correspondiente, no se entregarán los componentes físicos para el armado del proyecto.
+
+
+Guía de Preguntas
+Nombre del componente: (Bomba de agua (controlada por relé))
+¿Qué tipo de dispositivo es (sensor o actuador)? Explicá brevemente su función principal.
+ Es un actuador que impulsa agua al ser activado eléctricamente mediante un relé.
+¿Qué tipo de señal utiliza para comunicarse con Arduino?
+ El relé recibe una señal digital (HIGH o LOW) desde el pin de Arduino.
+¿Cuál es el rango de valores que puede entregar o recibir el componente?
+ El relé recibe 0 V o 5 V en su entrada de control.
+ La bomba puede operar con 6 V–12 V en su circuito de potencia.
+¿Qué pines de conexión tiene el componente? Ennumerar y describir su función.
+ VCC: alimentación 5 V.
+ GND: tierra.
+ IN: señal de control desde Arduino.
+ COM / NO / NC: contactos para conectar la bomba.
+¿Qué pin o pines de Arduino utilizan para conectarlo? ¿Por qué elegiste esos pines?
+ Pin 7, configurado como salida digital (relayBomba).
+Dibujá y explicá brevemente el esquema de conexión del componente con Arduino (incluyendo resistencias si son necesarias).
+ Arduino pin 7 → IN del relé
+ VCC → 5 V
+ GND → GND
+ COM → fuente de la bomba
+ NO → bomba de agua
+ El relé cierra el circuito cuando se activa.
+
+¿Cuál es el principio de funcionamiento del componente?
+ El relé usa un electroimán que conmuta un interruptor interno al recibir una señal digital, activando la bomba.
+¿Utiliza alguna librería particular para programarlo?
+ No. Se controla con digitalWrite().
+¿Cómo se interpreta el dato de entrada o salida del componente en el programa?
+ HIGH = relé activado (bomba encendida)
+ LOW = relé desactivado (bomba apagada)
+¿Qué limitaciones o precauciones eléctricas hay que tener en cuenta?
+ Usar una fuente independiente para la bomba si requiere más corriente, y no conectar cargas directamente al Arduino.
+¿Cómo verificarías que el componente funciona correctamente antes de incorporarlo al proyecto final?
+ Escuchar el clic del relé o medir con un multímetro si conmuta entre COM y NO.
+Simular en Tinkercad e incluir el link de la simulación.
+ (Link pendiente de incluir)
+En caso de aplicar, ¿qué valor o lectura esperás obtener en la simulación si el componente funciona correctamente?
+¿Cómo podría fallar el componente o cómo detectarías un mal funcionamiento en el código o en el circuito?
+ Si no hace clic o no conmuta, puede estar mal alimentado o el transistor interno dañado.
+
+
+
